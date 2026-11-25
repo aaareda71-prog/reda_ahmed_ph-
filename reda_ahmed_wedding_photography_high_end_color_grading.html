@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reda Ahmed | Wedding Photography & High-End Color Grading</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Tajawal & Cairo for Arabic, Cormorant Garamond & Inter for English Editorial Accents -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0B',
+            charcoal: '#121215',
+            surface: '#18181D',
+            surfaceHover: '#202027',
+            champagne: '#D8B98A',
+            goldSoft: '#B89764',
+            ivory: '#F5F2EC',
+            muted: '#9A968E',
+            hairline: 'rgba(216, 185, 138, 0.16)',
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'Tajawal', 'sans-serif'],
+            serifEn: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sansEn: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            luxury: '0 24px 60px -15px rgba(0, 0, 0, 0.75)',
+            goldGlow: '0 0 28px rgba(216, 185, 138, 0.18)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base luxury RTL & protection rules */
+    body {
+      background-color: #0A0A0B;
+      color: #F5F2EC;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-editorial-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Prevent image selection, dragging, and callouts across gallery */
+    .protected-media,
+    .protected-media img {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+      pointer-events: auto;
+    }
+
+    /* Subtle glass shield overlay over photos to deter casual saving */
+    .photo-shield {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-shield::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      z-index: 5;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272F;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D8B98A;
+    }
+
+    /* Smooth fade/slide animations */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeSlideUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Dedicated Session Template Visual Signatures */
+    .tpl-editorial-luxury {
+      border-color: rgba(216, 185, 138, 0.35);
+      background: linear-gradient(145deg, rgba(24, 24, 29, 0.96), rgba(14, 14, 17, 0.98));
+    }
+
+    .tpl-golden-hour {
+      border-color: rgba(235, 168, 92, 0.38);
+      background: linear-gradient(145deg, rgba(32, 22, 14, 0.95), rgba(15, 13, 12, 0.98));
+    }
+
+    .tpl-noir-fineart {
+      border-color: rgba(226, 226, 232, 0.25);
+      background: linear-gradient(145deg, rgba(20, 20, 22, 0.98), rgba(9, 9, 10, 0.99));
+    }
+
+    .tpl-garden-daylight {
+      border-color: rgba(156, 186, 152, 0.34);
+      background: linear-gradient(145deg, rgba(18, 25, 20, 0.95), rgba(12, 15, 13, 0.98));
+    }
+  </style>
+</head>
+
+<body class="bg-obsidian text-ivory selection:bg-champagne/30 selection:text-champagne">
+
+  <!-- Toast Notification (Copyright / Actions / Status) -->
+  <div
+    id="toast-container"
+    class="fixed bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-[100] pointer-events-none flex flex-col items-center gap-2 w-[92%] max-w-md"
+  ></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-obsidian/85 border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3">
+      <!-- Brand Identity -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-champagne/50 bg-surface flex items-center justify-center text-champagne font-editorial-en italic text-xl font-semibold shadow-goldGlow group-hover:border-champagne transition">
+          RA
+        </div>
+        <div class="leading-tight">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-base sm:text-lg tracking-wide text-ivory">رضا أحمد</span>
+            <span class="font-editorial-en italic text-champagne text-base sm:text-lg">Reda Ahmed</span>
+          </div>
+          <p class="text-[11px] sm:text-xs text-muted font-sansEn tracking-wider hidden sm:block">
+            Wedding Photography &amp; High-End Color Grading
+          </p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links (Desktop) -->
+      <nav class="hidden md:flex items-center gap-7 text-sm text-ivory/80">
+        <a href="#sessions-section" class="hover:text-champagne transition">السيشنات والقوالب</a>
+        <a href="#templates-guide" class="hover:text-champagne transition">قوالب العرض</a>
+        <a href="#about-grading" class="hover:text-champagne transition">أسلوب التلوين</a>
+        <a href="#booking-section" class="hover:text-champagne transition">الحجز والتواصل</a>
+      </nav>
+
+      <!-- Photographer Mode / Lock Button -->
+      <div class="flex items-center gap-2">
+        <button
+          id="photographer-auth-btn"
+          type="button"
+          class="px-3.5 py-2 rounded-full border border-champagne/35 bg-surface hover:bg-surfaceHover hover:border-champagne text-xs sm:text-sm text-champagne flex items-center gap-2 transition cursor-pointer"
+          title="دخول المصور للتحكم الكامل"
+        >
+          <span id="auth-lock-icon" class="inline-flex">
+            <!-- Lock SVG -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+          </span>
+          <span id="auth-btn-label">وضع المصور</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Active Photographer Control Banner (Visible only when unlocked) -->
+  <div
+    id="photographer-control-bar"
+    class="hidden bg-gradient-to-l from-champagne/15 via-surface to-champagne/15 border-b border-champagne/40"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 text-xs sm:text-sm">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-semibold text-champagne">وضع التحكم الكامل مفعل — Reda Ahmed</span>
+        <span class="text-muted hidden sm:inline">يمكنك إضافة السيشنات، تغيير القالب الخاص بكل سيشن، أو حذف سيشن.</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <button
+          id="open-add-session-btn"
+          type="button"
+          class="px-4 py-2 rounded-full bg-champagne text-obsidian font-bold text-xs sm:text-sm hover:bg-ivory transition cursor-pointer flex items-center gap-1.5 shadow-goldGlow"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          <span>إضافة سيشن جديد</span>
+        </button>
+        <button
+          id="open-pin-settings-btn"
+          type="button"
+          class="px-3.5 py-2 rounded-full border border-champagne/40 bg-obsidian/80 text-ivory hover:text-champagne text-xs sm:text-sm transition cursor-pointer"
+        >
+          تغيير الرمز السري
+        </button>
+        <button
+          id="lock-photographer-btn"
+          type="button"
+          class="px-3.5 py-2 rounded-full border border-red-400/35 bg-red-950/30 text-red-200 hover:bg-red-900/40 text-xs sm:text-sm transition cursor-pointer"
+        >
+          إغلاق وضع المصور
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="top" class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
+    <!-- Ambient Editorial Glows -->
+    <div class="pointer-events-none absolute -top-24 right-1/4 w-96 h-96 rounded-full bg-champagne/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-goldSoft/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Editorial Copy (RTL) -->
+        <div class="lg:col-span-7 space-y-6 text-right animate-fade-up">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-champagne/30 bg-surface/90 text-xs sm:text-sm text-champagne">
+            <span>معرض خاص للمشاهدة فقط</span>
+            <span class="text-muted">•</span>
+            <span class="font-editorial-en italic text-base tracking-wide">Private Editorial Gallery</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.2] text-ivory">
+            لحظات زفاف خالدة بعدسة
+            <span class="block text-champagne mt-1">رضا أحمد <span class="font-editorial-en italic font-normal text-4xl sm:text-6xl">(Reda Ahmed)</span></span>
+          </h1>
+
+          <p class="font-editorial-en italic text-2xl sm:text-3xl text-champagne/90 tracking-wide">
+            Wedding Photography &amp; High-End Color Grading
+          </p>
+
+          <p class="text-muted text-base sm:text-lg leading-relaxed max-w-2xl">
+            كل سيشن له قالبه الخاص المصمم بعناية ليعكس روح اليوم ومزاجه اللوني، مع معالجة لونية سينمائية فاخرة. تصفح واستمتع بالصور في مساحة عرض راقية مخصصة للمشاهدة فقط.
+          </p>
+
+          <!-- Direct Contact & CTA Row -->
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+            <a
+              href="https://wa.me/201102741005?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B1%D8%B6%D8%A7%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%AC%D8%B2%20%D8%B3%D9%8A%D8%B4%D9%86%20%D8%B2%D9%81%D8%A7%D9%81."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-full bg-champagne hover:bg-ivory text-obsidian font-bold text-sm sm:text-base transition flex items-center gap-2.5 shadow-goldGlow"
+            >
+              <!-- WhatsApp Icon -->
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.297-1.391c1.469.797 3.109 1.219 4.734 1.219 5.516 0 9.969-4.453 9.969-9.969 0-2.656-1.031-5.172-2.922-7.047-1.875-1.891-4.375-2.924-7.048-2.924zm5.828 14.125c-.25.703-1.438 1.344-1.984 1.422-.516.078-1.156.109-1.859-.109-.438-.141-.984-.328-1.688-.641-2.969-1.281-4.906-4.266-5.063-4.469-.141-.203-1.203-1.594-1.203-3.047 0-1.453.766-2.156 1.031-2.453.266-.297.578-.375.766-.375s.375.016.547.016c.172 0 .406-.063.641.484.234.563.813 1.984.891 2.125.078.141.125.313.031.5-.094.188-.141.313-.281.469-.141.156-.297.359-.422.484-.141.141-.297.297-.125.578.172.281.75 1.234 1.609 2 1.109.984 2.047 1.297 2.328 1.438.281.141.453.125.625-.078.172-.203.719-.844.906-1.125.188-.297.375-.234.625-.141.25.094 1.609.766 1.891.906.281.141.469.203.531.328.078.125.078.719-.172 1.422z" />
+              </svg>
+              <span>تواصل واتساب: 01102741005</span>
+            </a>
+
+            <a
+              href="tel:01102741005"
+              class="px-6 py-3.5 rounded-full border border-champagne/45 bg-surface hover:bg-surfaceHover text-ivory font-semibold text-sm sm:text-base transition flex items-center gap-2.5"
+            >
+              <!-- Phone Icon -->
+              <svg class="w-5 h-5 text-champagne" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              <span>اتصال مباشر: 01102741005</span>
+            </a>
+          </div>
+
+          <!-- Editorial Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-hairline max-w-xl">
+            <div>
+              <div class="font-editorial-en text-2xl sm:text-3xl font-semibold text-champagne">4 Templates</div>
+              <div class="text-xs sm:text-sm text-muted">قوالب مخصصة لكل سيشن</div>
+            </div>
+            <div>
+              <div class="font-editorial-en text-2xl sm:text-3xl font-semibold text-champagne">Color Grading</div>
+              <div class="text-xs sm:text-sm text-muted">تلوين سينمائي متقن</div>
+            </div>
+            <div>
+              <div class="font-editorial-en text-2xl sm:text-3xl font-semibold text-champagne">View Only</div>
+              <div class="text-xs sm:text-sm text-muted">حماية كاملة للمشاهدة</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Frame (Protected) -->
+        <div class="lg:col-span-5 protected-media">
+          <div class="relative rounded-3xl p-3 bg-surface border border-champagne/25 shadow-luxury">
+            <div class="photo-shield rounded-2xl aspect-[4/5] w-full bg-charcoal">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+                alt="Reda Ahmed Wedding Photography"
+                draggable="false"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x1000/18181D/D8B98A?text=Reda+Ahmed+Photography';"
+                class="w-full h-full object-cover rounded-2xl"
+              />
+              <!-- Subtle Signature Watermark -->
+              <div class="pointer-events-none absolute bottom-4 left-4 z-10 px-3 py-1 rounded-full bg-obsidian/70 backdrop-blur-md border border-champagne/25 text-[11px] font-editorial-en italic tracking-wider text-champagne/90">
+                © Reda Ahmed • High-End Color Grading
+              </div>
+            </div>
+
+            <div class="mt-3 px-2 py-1.5 flex items-center justify-between text-xs text-muted">
+              <span>إدارة كاملة للسيشنات من قِبل المصور</span>
+              <span class="font-editorial-en italic text-champagne">Signature Look</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Template Filter & Sessions Gallery Section -->
+  <section id="sessions-section" class="py-14 sm:py-20 border-t border-hairline bg-charcoal/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="font-editorial-en italic text-champagne text-lg sm:text-xl">Curated Sessions &amp; Dedicated Templates</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-ivory mt-1">السيشنات وقوالب العرض الخاصة بكل سيشن</h2>
+          <p class="text-muted text-sm sm:text-base mt-2 max-w-2xl">
+            كل سيشن يُعرض بقالب مستقل يناسب أجواء التصوير وأسلوب التلوين اللوني الخاص به. اضغط على أي سيشن لفتحه بالكامل والاستمتاع بمشاهدة الصور.
+          </p>
+        </div>
+
+        <!-- Template Filter Pills -->
+        <div id="template-filter-bar" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Sessions Grid -->
+      <div id="sessions-grid" class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-8 protected-media"></div>
+    </div>
+  </section>
+
+  <!-- Dedicated Session Templates Showcase Guide -->
+  <section id="templates-guide" class="py-14 sm:py-20 border-t border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="font-editorial-en italic text-champagne text-xl">Four Bespoke Session Templates</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-ivory mt-1">قوالب احترافية مستقلة لكل سيشن</h2>
+        <p class="text-muted text-sm sm:text-base mt-2">
+          يتحكم المصور رضا أحمد في تعيين القالب المناسب لكل سيشن على حدة، بحيث يظهر كل سيشن بهوية بصرية وتنسيق مختلف للصور.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Template 1 -->
+        <div class="rounded-2xl p-6 tpl-editorial-luxury border transition hover:-translate-y-1">
+          <div class="text-xs font-sansEn uppercase tracking-widest text-champagne mb-2">Template 01</div>
+          <h3 class="text-xl font-bold text-ivory">إديتوريال فاخر</h3>
+          <p class="font-editorial-en italic text-champagne/85 text-base mb-3">Editorial Luxury</p>
+          <p class="text-xs sm:text-sm text-muted leading-relaxed">
+            إطار مجلات أزياء راقٍ مع تباين ناعم وظلال ذهبية دافئة، يبرز التفاصيل المعمارية والفساتين بأناقة كلاسيكية.
+          </p>
+        </div>
+
+        <!-- Template 2 -->
+        <div class="rounded-2xl p-6 tpl-golden-hour border transition hover:-translate-y-1">
+          <div class="text-xs font-sansEn uppercase tracking-widest text-amber-300 mb-2">Template 02</div>
+          <h3 class="text-xl font-bold text-ivory">ساعة الغروب السينمائية</h3>
+          <p class="font-editorial-en italic text-amber-200/85 text-base mb-3">Cinematic Golden Hour</p>
+          <p class="text-xs sm:text-sm text-muted leading-relaxed">
+            درجات كهرمانية وعسلية غنية تمنح صور الغروب والبحر والصحراء إحساساً سينمائياً دافئاً وناعماً.
+          </p>
+        </div>
+
+        <!-- Template 3 -->
+        <div class="rounded-2xl p-6 tpl-noir-fineart border transition hover:-translate-y-1">
+          <div class="text-xs font-sansEn uppercase tracking-widest text-zinc-300 mb-2">Template 03</div>
+          <h3 class="text-xl font-bold text-ivory">نوار وفن رفيع</h3>
+          <p class="font-editorial-en italic text-zinc-300/85 text-base mb-3">Classic Noir &amp; Fine Art</p>
+          <p class="text-xs sm:text-sm text-muted leading-relaxed">
+            تركيز درامي عميق وتباين مدروس يبرز المشاعر الصادقة والنظرات في اللحظات المسائية والحفلات الليلية.
+          </p>
+        </div>
+
+        <!-- Template 4 -->
+        <div class="rounded-2xl p-6 tpl-garden-daylight border transition hover:-translate-y-1">
+          <div class="text-xs font-sansEn uppercase tracking-widest text-emerald-300 mb-2">Template 04</div>
+          <h3 class="text-xl font-bold text-ivory">ضوء النهار والحدائق</h3>
+          <p class="font-editorial-en italic text-emerald-200/85 text-base mb-3">Garden &amp; Daylight</p>
+          <p class="text-xs sm:text-sm text-muted leading-relaxed">
+            إشراقة طبيعية متوازنة مع خضرة ناعمة وبشرة نقية مريحة للعين، مثالي لجلسات الصباح والحدائق المفتوحة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Color Grading & Protection Section -->
+  <section id="about-grading" class="py-14 sm:py-20 border-t border-hairline bg-charcoal/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      <div class="rounded-3xl p-7 sm:p-9 bg-surface border border-hairline flex flex-col justify-between">
+        <div>
+          <span class="font-editorial-en italic text-champagne text-xl">High-End Color Grading</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-ivory mt-1 mb-4">تلوين احترافي يحفظ هوية كل لحظة</h3>
+          <p class="text-muted text-sm sm:text-base leading-relaxed">
+            لا نعتمد على فلاتر عشوائية؛ بل يتم بناء المعالجة اللونية لكل سيشن بدقة لتوازن بين عمق الظلال، نقاء الإضاءة، وطبيعية درجات البشرة، بحيث تبقى الصور حية وأنيقة على المدى الطويل.
+          </p>
+        </div>
+        <div class="mt-6 pt-5 border-t border-hairline flex items-center justify-between text-xs text-champagne">
+          <span>تخصيص لوني لكل سيشن منفصل</span>
+          <span class="font-editorial-en italic text-base">Bespoke LUT &amp; Tone Curve</span>
+        </div>
+      </div>
+
+      <div class="rounded-3xl p-7 sm:p-9 bg-surface border border-hairline flex flex-col justify-between">
+        <div>
+          <span class="font-editorial-en italic text-champagne text-xl">Exclusive Photographer Control</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-ivory mt-1 mb-4">تحكم كامل للمصور ومشاهدة فقط للزائر</h3>
+          <p class="text-muted text-sm sm:text-base leading-relaxed">
+            إضافة السيشنات وتغيير القوالب وإدارة المحتوى بالكامل متاحة للمصور <strong class="text-ivory">Reda Ahmed</strong> فقط عبر وضع المصور المحمي برمز سري. أما الزائر فمساحته مخصصة لمشاهدة الصور والاستمتاع بها فقط دون تحميل أو تعديل.
+          </p>
+        </div>
+        <div class="mt-6 pt-5 border-t border-hairline flex items-center justify-between text-xs text-champagne">
+          <span>حماية كليك يمين والسحب والمشاهدة فقط</span>
+          <span class="font-editorial-en italic text-base">Protected Viewing Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Booking & Contact Section -->
+  <section id="booking-section" class="py-16 sm:py-24 border-t border-hairline">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl p-7 sm:p-12 bg-gradient-to-br from-surface via-charcoal to-obsidian border border-champagne/30 shadow-luxury text-center space-y-6">
+        <span class="font-editorial-en italic text-champagne text-2xl">Book Your Session</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-ivory">احجز موعد سيشن الزفاف أو الفرح مع رضا أحمد</h2>
+        <p class="text-muted text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          للتواصل المباشر وتأكيد المواعيد أو الاستفسار عن تفاصيل التغطية وأسلوب التلوين المناسب ليومك الخاص، تواصل عبر واتساب أو اتصال هاتفي مباشر على الرقم:
+        </p>
+
+        <div class="inline-block px-6 py-2.5 rounded-2xl bg-obsidian/90 border border-champagne/40 font-sansEn text-2xl sm:text-3xl font-semibold tracking-widest text-champagne select-all">
+          01102741005
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <a
+            href="https://wa.me/201102741005?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B1%D8%B6%D8%A7%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AA%D8%B5%D9%88%D9%8A%D8%B1%20%D8%B2%D9%81%D8%A7%D9%81."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-champagne hover:bg-ivory text-obsidian font-bold text-sm sm:text-base transition flex items-center justify-center gap-2.5 shadow-goldGlow"
+          >
+            <span>مراسلة واتساب مباشرة</span>
+          </a>
+
+          <a
+            href="tel:01102741005"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-full border border-champagne/50 bg-surface hover:bg-surfaceHover text-ivory font-semibold text-sm sm:text-base transition flex items-center justify-center gap-2.5"
+          >
+            <span>اتصال هاتفي (01102741005)</span>
+          </a>
+
+          <button
+            id="copy-phone-btn"
+            type="button"
+            class="w-full sm:w-auto px-5 py-3.5 rounded-full border border-hairline bg-obsidian/70 hover:border-champagne/40 text-muted hover:text-ivory text-sm transition cursor-pointer"
+          >
+            نسخ الرقم
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-hairline bg-obsidian py-10 pb-24 sm:pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-muted">
+      <div>
+        <span class="text-ivory font-semibold">رضا أحمد — Reda Ahmed</span> • Wedding Photography &amp; High-End Color Grading
+      </div>
+      <div class="flex items-center gap-4">
+        <span>01102741005</span>
+        <span>•</span>
+        <span>جميع الحقوق محفوظة والمشاهدة فقط</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick-Contact Bar (Mobile & Desktop) -->
+  <div class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-40 flex items-center justify-center sm:justify-end gap-2.5 pointer-events-none">
+    <a
+      href="https://wa.me/201102741005"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pointer-events-auto px-4 py-2.5 rounded-full bg-champagne text-obsidian font-bold text-xs sm:text-sm shadow-luxury hover:bg-ivory transition flex items-center gap-2"
+    >
+      <span>واتساب • 01102741005</span>
+    </a>
+    <a
+      href="tel:01102741005"
+      class="pointer-events-auto px-4 py-2.5 rounded-full bg-surface/95 backdrop-blur-md border border-champagne/45 text-ivory font-semibold text-xs sm:text-sm shadow-luxury hover:border-champagne transition flex items-center gap-2"
+    >
+      <span>اتصال</span>
+    </a>
+  </div>
+
+  <!-- Session Showcase & Fullscreen Viewer Modal -->
+  <div
+    id="session-viewer-modal"
+    class="fixed inset-0 z-50 hidden bg-obsidian/95 backdrop-blur-2xl overflow-y-auto protected-media"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="min-h-screen max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <!-- Top Bar inside Session Viewer -->
+      <div class="flex items-center justify-between gap-4 pb-5 border-b border-hairline sticky top-0 bg-obsidian/90 backdrop-blur-md z-20 pt-2">
+        <div class="flex items-center gap-3">
+          <span id="viewer-template-badge" class="px-3 py-1 rounded-full text-xs font-semibold border border-champagne/40 text-champagne"></span>
+          <span class="text-xs text-muted hidden sm:inline">وضع المشاهدة المحمية فقط</span>
+        </div>
+        <button
+          id="close-session-viewer-btn"
+          type="button"
+          class="px-4 py-2 rounded-full bg-surface hover:bg-surfaceHover border border-hairline text-ivory text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer transition"
+        >
+          <span>إغلاق السيشن</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Session Story & Metadata -->
+      <div id="viewer-session-header" class="py-8 space-y-3"></div>
+
+      <!-- Session Photos Layout (Adapts based on Session Template!) -->
+      <div id="viewer-photos-container" class="space-y-6 pb-16"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox Single Photo Preview Modal (View Only) -->
+  <div
+    id="lightbox-modal"
+    class="fixed inset-0 z-[60] hidden bg-black/95 backdrop-blur-2xl flex items-center justify-center p-4 protected-media"
+    role="dialog"
+    aria-modal="true"
+  >
+    <button
+      id="close-lightbox-btn"
+      type="button"
+      class="absolute top-5 left-5 z-20 w-11 h-11 rounded-full bg-surface/90 border border-champagne/30 text-ivory hover:text-champagne flex items-center justify-center cursor-pointer transition"
+      aria-label="إغلاق"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div class="max-w-5xl w-full flex flex-col items-center gap-4">
+      <div class="photo-shield rounded-2xl overflow-hidden border border-champagne/25 max-h-[78vh] bg-charcoal shadow-luxury">
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Session Photo"
+          draggable="false"
+          class="max-h-[78vh] w-auto max-w-full object-contain"
+        />
+        <div class="pointer-events-none absolute bottom-3 left-3 z-10 px-3 py-1 rounded-full bg-obsidian/75 border border-champagne/25 text-xs font-editorial-en italic text-champagne">
+          Reda Ahmed • Protected View
+        </div>
+      </div>
+      <p id="lightbox-caption" class="text-xs sm:text-sm text-muted text-center"></p>
+    </div>
+  </div>
+
+  <!-- Photographer PIN Login Modal -->
+  <div
+    id="pin-login-modal"
+    class="fixed inset-0 z-[70] hidden bg-obsidian/90 backdrop-blur-xl flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="w-full max-w-md rounded-3xl bg-surface border border-champagne/35 p-6 sm:p-8 shadow-luxury space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="font-editorial-en italic text-champagne text-lg">Photographer Access</span>
+          <h3 class="text-2xl font-bold text-ivory">دخول وضع المصور — رضا أحمد</h3>
+        </div>
+        <button
+          id="close-pin-modal-btn"
+          type="button"
+          class="w-9 h-9 rounded-full bg-obsidian border border-hairline text-muted hover:text-ivory flex items-center justify-center cursor-pointer"
+        >
+          ✕
+        </button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-muted leading-relaxed">
+        هذا الوضع مخصص لك فقط لإضافة السيشنات وتغيير قوالب العرض وإدارة المعرض بالكامل.
+      </p>
+
+      <form id="pin-login-form" class="space-y-4">
+        <div>
+          <label for="pin-input" class="block text-xs font-semibold text-champagne mb-2">الرمز السري (PIN)</label>
+          <input
+            id="pin-input"
+            type="password"
+            inputmode="numeric"
+            maxlength="12"
+            required
+            placeholder="أدخل الرمز السري..."
+            class="w-full px-4 py-3 rounded-xl bg-obsidian border border-champagne/30 focus:border-champagne outline-none text-ivory tracking-widest text-center text-lg"
+          />
+          <p class="text-[11px] text-muted mt-2">
+            الرمز السري الافتراضي: <span class="text-champagne font-sansEn font-semibold">2026</span> (يمكن تغييره بعد الدخول).
+          </p>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-3 rounded-xl bg-champagne hover:bg-ivory text-obsidian font-bold text-sm transition cursor-pointer shadow-goldGlow"
+        >
+          تفعيل وضع التحكم الكامل
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add / Edit Session Modal (Photographer Only) -->
+  <div
+    id="session-form-modal"
+    class="fixed inset-0 z-[75] hidden bg-obsidian/90 backdrop-blur-xl overflow-y-auto flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="w-full max-w-2xl rounded-3xl bg-surface border border-champagne/35 p-6 sm:p-8 shadow-luxury my-8 space-y-5">
+      <div class="flex items-center justify-between border-b border-hairline pb-4">
+        <div>
+          <span class="font-editorial-en italic text-champagne text-lg">Session Studio Builder</span>
+          <h3 id="session-form-title" class="text-2xl font-bold text-ivory">إضافة سيشن جديد بقالب مخصص</h3>
+        </div>
+        <button
+          id="close-session-form-btn"
+          type="button"
+          class="w-9 h-9 rounded-full bg-obsidian border border-hairline text-muted hover:text-ivory flex items-center justify-center cursor-pointer"
+        >
+          ✕
+        </button>
+      </div>
+
+      <form id="session-form" class="space-y-4">
+        <input type="hidden" id="edit-session-id" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="session-title-input" class="block text-xs font-semibold text-champagne mb-1.5">عنوان السيشن (عربي)</label>
+            <input
+              id="session-title-input"
+              type="text"
+              required
+              placeholder="مثال: زفاف كريم وسلمى"
+              class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory"
+            />
+          </div>
+
+          <div>
+            <label for="session-subtitle-input" class="block text-xs font-semibold text-champagne mb-1.5">العنوان الإنجليزي / الوصف القصير</label>
+            <input
+              id="session-subtitle-input"
+              type="text"
+              required
+              placeholder="مثال: Karim & Salma • Sunset Villa"
+              class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory font-sansEn"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label for="session-template-select" class="block text-xs font-semibold text-champagne mb-1.5">قالب السيشن المخصص</label>
+            <select
+              id="session-template-select"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory"
+            >
+              <option value="editorial-luxury">Editorial Luxury (إديتوريال فاخر)</option>
+              <option value="golden-hour">Cinematic Golden Hour (ساعة الغروب)</option>
+              <option value="noir-fineart">Classic Noir &amp; Fine Art (نوار وفن رفيع)</option>
+              <option value="garden-daylight">Garden &amp; Daylight (ضوء النهار)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="session-grading-input" class="block text-xs font-semibold text-champagne mb-1.5">أسلوب التلوين (Color Grading)</label>
+            <input
+              id="session-grading-input"
+              type="text"
+              required
+              placeholder="مثال: Warm Film & Rich Shadows"
+              class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory"
+            />
+          </div>
+
+          <div>
+            <label for="session-date-input" class="block text-xs font-semibold text-champagne mb-1.5">التاريخ / الموقع</label>
+            <input
+              id="session-date-input"
+              type="text"
+              required
+              placeholder="مثال: نوفمبر 2026 • القاهرة"
+              class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="session-story-input" class="block text-xs font-semibold text-champagne mb-1.5">كلمة المصور عن السيشن</label>
+          <textarea
+            id="session-story-input"
+            rows="2"
+            required
+            placeholder="اكتب لمحة سريعة عن قصة السيشن وأجواء الإضاءة والتلوين..."
+            class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-sm text-ivory"
+          ></textarea>
+        </div>
+
+        <!-- Upload Photos from Device OR Add Photo URLs -->
+        <div class="rounded-2xl p-4 bg-obsidian/70 border border-hairline space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <label for="session-file-upload" class="text-xs font-semibold text-champagne">رفع صور من الجهاز مباشرة</label>
+            <input
+              id="session-file-upload"
+              type="file"
+              accept="image/*"
+              multiple
+              class="text-xs text-muted file:mr-0 file:ml-3 file:px-3 file:py-1.5 file:rounded-full file:border-0 file:bg-champagne/20 file:text-champagne hover:file:bg-champagne/30 cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <label for="session-urls-input" class="block text-xs font-semibold text-champagne mb-1.5">
+              روابط الصور (رابط في كل سطر — يُضاف تلقائياً للصور المرفوعة)
+            </label>
+            <textarea
+              id="session-urls-input"
+              rows="4"
+              placeholder="https://images.unsplash.com/photo-..."
+              class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal border border-hairline focus:border-champagne outline-none text-xs font-sansEn text-ivory ltr text-left"
+              dir="ltr"
+            ></textarea>
+          </div>
+
+          <div id="uploaded-photos-preview" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button
+            type="button"
+            id="cancel-session-form-btn"
+            class="px-5 py-2.5 rounded-xl border border-hairline text-muted hover:text-ivory text-sm cursor-pointer"
+          >
+            إلغاء
+          </button>
+          <button
+            type="submit"
+            class="px-6 py-2.5 rounded-xl bg-champagne hover:bg-ivory text-obsidian font-bold text-sm transition cursor-pointer shadow-goldGlow"
+          >
+            حفظ السيشن
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Change PIN Modal (Photographer Only) -->
+  <div
+    id="change-pin-modal"
+    class="fixed inset-0 z-[80] hidden bg-obsidian/90 backdrop-blur-xl flex items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="w-full max-w-sm rounded-3xl bg-surface border border-champagne/35 p-6 shadow-luxury space-y-4">
+      <h3 class="text-xl font-bold text-ivory">تغيير الرمز السري لوضع المصور</h3>
+      <form id="change-pin-form" class="space-y-4">
+        <div>
+          <label for="new-pin-input" class="block text-xs font-semibold text-champagne mb-1.5">الرمز السري الجديد (4 أرقام أو أكثر)</label>
+          <input
+            id="new-pin-input"
+            type="password"
+            minlength="4"
+            required
+            placeholder="••••"
+            class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-hairline focus:border-champagne outline-none text-ivory text-center tracking-widest"
+          />
+        </div>
+        <div class="flex justify-end gap-2">
+          <button
+            type="button"
+            id="cancel-pin-change-btn"
+            class="px-4 py-2 rounded-xl border border-hairline text-xs text-muted hover:text-ivory cursor-pointer"
+          >
+            إلغاء
+          </button>
+          <button
+            type="submit"
+            class="px-5 py-2 rounded-xl bg-champagne text-obsidian font-bold text-xs cursor-pointer"
+          >
+            حفظ الرمز
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Application JavaScript -->
+  <script>
+    /**
+     * Reda Ahmed — Wedding Photography & High-End Color Grading
+     * State Management, Dedicated Session Templates, Visitor Anti-Download Protection,
+     * and Photographer-Only Control Mode.
+     */
+    (function () {
+      'use strict';
+
+      const STORAGE_KEYS = {
+        SESSIONS: 'reda_ahmed_sessions_v1',
+        PIN: 'reda_ahmed_pin_v1',
+      };
+
+      const DEFAULT_PIN = '2026';
+      const PHONE_NUMBER = '01102741005';
+
+      const TEMPLATE_META = {
+        'editorial-luxury': {
+          id: 'editorial-luxury',
+          labelAr: 'إديتوريال فاخر',
+          labelEn: 'Editorial Luxury',
+          cardClass: 'tpl-editorial-luxury',
+          badgeClass: 'bg-champagne/15 text-champagne border-champagne/40',
+          desc: 'تنسيق مجلات راقٍ بتباين متوازن ولمسات ذهبية كلاسيكية.',
+        },
+        'golden-hour': {
+          id: 'golden-hour',
+          labelAr: 'ساعة الغروب السينمائية',
+          labelEn: 'Cinematic Golden Hour',
+          cardClass: 'tpl-golden-hour',
+          badgeClass: 'bg-amber-500/15 text-amber-200 border-amber-400/40',
+          desc: 'تدرجات دافئة وكهرمانية مستوحاة من ضوء الغروب الذهبي.',
+        },
+        'noir-fineart': {
+          id: 'noir-fineart',
+          labelAr: 'نوار وفن رفيع',
+          labelEn: 'Classic Noir & Fine Art',
+          cardClass: 'tpl-noir-fineart',
+          badgeClass: 'bg-zinc-200/10 text-zinc-200 border-zinc-400/35',
+          desc: 'عمق سينمائي وتركيز درامي على التفاصيل والمشاعر.',
+        },
+        'garden-daylight': {
+          id: 'garden-daylight',
+          labelAr: 'ضوء النهار والحدائق',
+          labelEn: 'Garden & Daylight',
+          cardClass: 'tpl-garden-daylight',
+          badgeClass: 'bg-emerald-500/15 text-emerald-200 border-emerald-400/35',
+          desc: 'إضاءة نهارية نقية وألوان طبيعية ناعمة في الأجواء المفتوحة.',
+        },
+      };
+
+      const INITIAL_SESSIONS = [
+        {
+          id: 'sess-1',
+          title: 'حفل زفاف عمر وليلى',
+          subtitle: 'Omar & Layla • Grand Palace & Terrace',
+          templateId: 'editorial-luxury',
+          colorGrading: 'Warm Ivory & Champagne Film Grade',
+          dateLocation: 'أكتوبر 2026 • القاهرة',
+          story: 'توثيق هادئ وأنيق لتفاصيل الفستان، الإضاءة المعمارية، واللحظات العاطفية الأولى بقالب إديتوريال فاخر.',
+          photos: [
+            {
+              url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85',
+              caption: 'إطلالة العروسين في القاعة الرئيسية — معالجة إديتوريال دافئة',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=85',
+              caption: 'تفاصيل اللحظة وتوازن الظلال والإضاءة الناعمة',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=85',
+              caption: 'لقطة مقربة للمشاعر مع تلوين سينمائي متقن',
+            },
+          ],
+        },
+        {
+          id: 'sess-2',
+          title: 'سيشن غروب طارق ومريم',
+          subtitle: 'Tariq & Mariam • Golden Coast Sunset',
+          templateId: 'golden-hour',
+          colorGrading: 'Amber Sunset & Halation Glow',
+          dateLocation: 'سبتمبر 2026 • الساحل الشمالي',
+          story: 'جلسة تصوير قبيل الغروب مباشرة مع توهج ذهبي طبيعي على الأفق وتدرج لوني كهرماني يمنح الصور دفئاً استثنائياً.',
+          photos: [
+            {
+              url: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=85',
+              caption: 'ضوء الغروب الذهبي على الأفق وتناغم الألوان الدافئة',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=85',
+              caption: 'حركة طبيعية في الهواء مع تلوين ساعة الغروب',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=85',
+              caption: 'انعكاس الشمس الناعم وتفاصيل القماش',
+            },
+          ],
+        },
+        {
+          id: 'sess-3',
+          title: 'أمسية يوسف ونادين',
+          subtitle: 'Youssef & Nadine • Midnight Velvet & Noir',
+          templateId: 'noir-fineart',
+          colorGrading: 'Deep Obsidian & Fine Art Contrast',
+          dateLocation: 'أغسطس 2026 • الجيزة',
+          story: 'قالب نوار وفن رفيع مخصص للأجواء المسائية العميقة حيث تبرز الإضاءة الموجهة والنظرات الصامتة بوضوح لافت.',
+          photos: [
+            {
+              url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=85',
+              caption: 'تكوين درامي وإضاءة مسائية مركزة',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=85',
+              caption: 'تباين ناعم يحفظ تفاصيل الظلال والملامح',
+            },
+          ],
+        },
+        {
+          id: 'sess-4',
+          title: 'صباح حديقة آدم وسلمى',
+          subtitle: 'Adam & Salma • Botanical Morning Light',
+          templateId: 'garden-daylight',
+          colorGrading: 'Clean Daylight & Botanical Greens',
+          dateLocation: 'يوليو 2026 • الشيخ زايد',
+          story: 'إشراقة صباحية هادئة وسط الخضرة الطبيعية مع معالجة لونية نقية تحافظ على صفاء الضوء وطبيعية الألوان.',
+          photos: [
+            {
+              url: 'https://images.unsplash.com/photo-1509927083805-5406790882d9?auto=format&fit=crop&w=1200&q=85',
+              caption: 'إضاءة نهارية متوازنة وسط الحدائق',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1591604466107-ec972577940d?auto=format&fit=crop&w=1200&q=85',
+              caption: 'ألوان طبيعية مريحة للعين وتفاصيل دقيقة',
+            },
+          ],
+        },
+      ];
+
+      // App State
+      let sessions = loadSessions();
+      let activeTemplateFilter = 'all';
+      let isPhotographerMode = false;
+      let pendingUploadedPhotos = [];
+      let currentViewedSessionId = null;
+
+      function loadSessions() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEYS.SESSIONS);
+          if (!raw) return [...INITIAL_SESSIONS];
+          const parsed = JSON.parse(raw);
+          return Array.isArray(parsed) && parsed.length > 0 ? parsed : [...INITIAL_SESSIONS];
+        } catch (err) {
+          console.error('Error loading sessions:', err);
+          return [...INITIAL_SESSIONS];
+        }
+      }
+
+      function saveSessions() {
+        try {
+          localStorage.setItem(STORAGE_KEYS.SESSIONS, JSON.stringify(sessions));
+        } catch (err) {
+          console.error('Error saving sessions:', err);
+          showToast('تنبيه: قد تكون مساحة التخزين المحلية ممتلئة لبعض الصور المرفوعة.', 'warning');
+        }
+      }
+
+      function getPin() {
+        try {
+          return localStorage.getItem(STORAGE_KEYS.PIN) || DEFAULT_PIN;
+        } catch {
+          return DEFAULT_PIN;
+        }
+      }
+
+      function setPin(newPin) {
+        try {
+          localStorage.setItem(STORAGE_KEYS.PIN, newPin);
+          return true;
+        } catch {
+          return false;
+        }
+      }
+
+      // Toast helper (replaces alert/confirm)
+      function showToast(message, type = 'info') {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+
+        const toast = document.createElement('div');
+        const borderClass =
+          type === 'success'
+            ? 'border-emerald-400/50 text-emerald-100'
+            : type === 'warning'
+            ? 'border-amber-400/50 text-amber-100'
+            : 'border-champagne/45 text-ivory';
+
+        toast.className = `px-4 py-3 rounded-2xl bg-surface/95 backdrop-blur-xl border ${borderClass} shadow-luxury text-xs sm:text-sm text-center animate-fade-up`;
+        toast.textContent = message;
+
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => toast.remove(), 320);
+        }, 2800);
+      }
+
+      // Anti-Download & View-Only Protection for Visitors
+      function setupVisitorProtection() {
+        document.addEventListener('contextmenu', (e) => {
+          if (isPhotographerMode) return;
+          const target = e.target;
+          if (target && (target.closest('.protected-media') || target.tagName === 'IMG')) {
+            e.preventDefault();
+            showToast('الصور محمية لحقوق الملكية الخاصة بـ Reda Ahmed — للمشاهدة فقط');
+          }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+          if (e.target && e.target.tagName === 'IMG') {
+            e.preventDefault();
+          }
+        });
+      }
+
+      // Render Template Filter Pills
+      function renderFilterBar() {
+        const filterBar = document.getElementById('template-filter-bar');
+        if (!filterBar) return;
+
+        const filters = [
+          { id: 'all', label: 'كل السيشنات' },
+          ...Object.values(TEMPLATE_META).map((t) => ({ id: t.id, label: t.labelAr })),
+        ];
+
+        filterBar.innerHTML = filters
+          .map((f) => {
+            const active = activeTemplateFilter === f.id;
+            const cls = active
+              ? 'bg-champagne text-obsidian font-bold border-champagne'
+              : 'bg-surface text-ivory/80 hover:text-champagne border-hairline hover:border-champagne/40';
+            return `<button type="button" data-filter="${f.id}" class="filter-pill px-4 py-2 rounded-full border text-xs sm:text-sm transition cursor-pointer ${cls}">${f.label}</button>`;
+          })
+          .join('');
+
+        filterBar.querySelectorAll('.filter-pill').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            activeTemplateFilter = btn.getAttribute('data-filter') || 'all';
+            renderFilterBar();
+            renderSessionsGrid();
+          });
+        });
+      }
+
+      // Render Sessions Grid with each session's dedicated template styling
+      function renderSessionsGrid() {
+        const grid = document.getElementById('sessions-grid');
+        if (!grid) return;
+
+        const filtered =
+          activeTemplateFilter === 'all'
+            ? sessions
+            : sessions.filter((s) => s.templateId === activeTemplateFilter);
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+            <div class="col-span-full rounded-3xl p-12 bg-surface border border-hairline text-center space-y-3">
+              <p class="text-lg font-semibold text-ivory">لا توجد سيشنات مسجلة بهذا القالب حالياً</p>
+              <p class="text-sm text-muted">يمكنك اختيار قالب آخر أو تفعيل وضع المصور لإضافة سيشن جديد.</p>
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = filtered
+          .map((session, idx) => {
+            const tpl = TEMPLATE_META[session.templateId] || TEMPLATE_META['editorial-luxury'];
+            const coverPhoto =
+              (session.photos && session.photos[0] && session.photos[0].url) ||
+              'https://placehold.co/900x600/18181D/D8B98A?text=Reda+Ahmed+Session';
+
+            const adminControlsHtml = isPhotographerMode
+              ? `
+                <div class="mt-4 pt-4 border-t border-hairline flex flex-wrap items-center justify-between gap-2 relative z-20">
+                  <div class="flex items-center gap-2">
+                    <label class="text-[11px] text-muted">تغيير القالب:</label>
+                    <select
+                      data-quick-tpl="${session.id}"
+                      class="quick-template-select px-2.5 py-1 rounded-lg bg-obsidian border border-champagne/35 text-xs text-champagne outline-none cursor-pointer"
+                    >
+                      ${Object.values(TEMPLATE_META)
+                        .map(
+                          (m) =>
+                            `<option value="${m.id}" ${m.id === session.templateId ? 'selected' : ''}>${m.labelAr}</option>`
+                        )
+                        .join('')}
+                    </select>
+                  </div>
+
+                  <div class="flex items-center gap-1.5">
+                    ${
+                      idx > 0
+                        ? `<button type="button" data-move-up="${session.id}" class="move-up-btn px-2.5 py-1 rounded-lg bg-obsidian border border-hairline hover:border-champagne text-xs text-ivory cursor-pointer" title="تحريك لأعلى">↑</button>`
+                        : ''
+                    }
+                    <button type="button" data-edit-session="${session.id}" class="edit-session-btn px-3 py-1 rounded-lg bg-obsidian border border-champagne/35 hover:bg-champagne hover:text-obsidian text-xs text-champagne transition cursor-pointer">
+                      تعديل
+                    </button>
+                    <button type="button" data-delete-session="${session.id}" class="delete-session-btn px-3 py-1 rounded-lg bg-red-950/40 border border-red-400/35 hover:bg-red-900/60 text-xs text-red-200 transition cursor-pointer">
+                      حذف
+                    </button>
+                  </div>
+                </div>
+              `
+              : '';
+
+            return `
+              <article class="rounded-3xl p-4 sm:p-5 border ${tpl.cardClass} shadow-luxury flex flex-col justify-between group transition duration-300 hover:border-champagne/50">
+                <div>
+                  <!-- Clickable Cover for Session View -->
+                  <div
+                    data-open-session="${session.id}"
+                    class="open-session-trigger photo-shield rounded-2xl aspect-[16/10] w-full bg-charcoal cursor-pointer overflow-hidden mb-4"
+                  >
+                    <img
+                      src="${escapeAttr(coverPhoto)}"
+                      alt="${escapeAttr(session.title)}"
+                      draggable="false"
+                      onerror="this.onerror=null;this.src='https://placehold.co/900x600/18181D/D8B98A?text=Reda+Ahmed';"
+                      class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div class="pointer-events-none absolute top-3 right-3 z-10 px-3 py-1 rounded-full border text-xs font-semibold backdrop-blur-md ${tpl.badgeClass}">
+                      ${tpl.labelAr} • <span class="font-editorial-en italic">${tpl.labelEn}</span>
+                    </div>
+                    <div class="pointer-events-none absolute bottom-3 left-3 z-10 px-3 py-1 rounded-full bg-obsidian/75 border border-champagne/20 text-[11px] font-editorial-en italic text-champagne/90">
+                      Reda Ahmed
+                    </div>
+                  </div>
+
+                  <!-- Session Info -->
+                  <div class="flex items-start justify-between gap-3">
+                    <div>
+                      <h3
+                        data-open-session="${session.id}"
+                        class="open-session-trigger text-xl sm:text-2xl font-bold text-ivory group-hover:text-champagne transition cursor-pointer"
+                      >
+                        ${escapeHtml(session.title)}
+                      </h3>
+                      <p class="font-editorial-en italic text-champagne/85 text-base sm:text-lg">${escapeHtml(session.subtitle)}</p>
+                    </div>
+                    <span class="text-xs text-muted whitespace-nowrap">${escapeHtml(session.dateLocation)}</span>
+                  </div>
+
+                  <p class="text-muted text-xs sm:text-sm leading-relaxed mt-2.5 line-clamp-2">
+                    ${escapeHtml(session.story)}
+                  </p>
+
+                  <div class="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs">
+                    <span class="text-champagne/90 font-sansEn">Grade: ${escapeHtml(session.colorGrading)}</span>
+                    <button
+                      type="button"
+                      data-open-session="${session.id}"
+                      class="open-session-trigger text-champagne hover:underline font-semibold cursor-pointer"
+                    >
+                      مشاهدة السيشن (${(session.photos && session.photos.length) || 0} صور) ←
+                    </button>
+                  </div>
+                </div>
+
+                ${adminControlsHtml}
+              </article>
+            `;
+          })
+          .join('');
+
+        // Bind open session triggers
+        grid.querySelectorAll('.open-session-trigger').forEach((el) => {
+          el.addEventListener('click', () => {
+            const id = el.getAttribute('data-open-session');
+            if (id) openSessionViewer(id);
+          });
+        });
+
+        // Bind Photographer quick template selector
+        grid.querySelectorAll('.quick-template-select').forEach((select) => {
+          select.addEventListener('change', (e) => {
+            e.stopPropagation();
+            const id = select.getAttribute('data-quick-tpl');
+            const newTpl = select.value;
+            const sess = sessions.find((s) => s.id === id);
+            if (sess && TEMPLATE_META[newTpl]) {
+              sess.templateId = newTpl;
+              saveSessions();
+              renderSessionsGrid();
+              showToast(`تم تغيير قالب "${sess.title}" إلى ${TEMPLATE_META[newTpl].labelAr}`, 'success');
+            }
+          });
+        });
+
+        // Bind move up
+        grid.querySelectorAll('.move-up-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-move-up');
+            const index = sessions.findIndex((s) => s.id === id);
+            if (index > 0) {
+              const temp = sessions[index - 1];
+              sessions[index - 1] = sessions[index];
+              sessions[index] = temp;
+              saveSessions();
+              renderSessionsGrid();
+              showToast('تم تحديث ترتيب السيشنات', 'success');
+            }
+          });
+        });
+
+        // Bind edit session
+        grid.querySelectorAll('.edit-session-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-edit-session');
+            openSessionFormModal(id);
+          });
+        });
+
+        // Bind delete session
+        grid.querySelectorAll('.delete-session-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-delete-session');
+            const target = sessions.find((s) => s.id === id);
+            if (!target) return;
+            sessions = sessions.filter((s) => s.id !== id);
+            saveSessions();
+            renderSessionsGrid();
+            showToast(`تم حذف سيشن "${target.title}"`, 'info');
+          });
+        });
+      }
+
+      // Open Full Session Viewer with Template-Specific Layout
+      function openSessionViewer(sessionId) {
+        const session = sessions.find((s) => s.id === sessionId);
+        if (!session) return;
+
+        currentViewedSessionId = sessionId;
+        const tpl = TEMPLATE_META[session.templateId] || TEMPLATE_META['editorial-luxury'];
+        const modal = document.getElementById('session-viewer-modal');
+        const badge = document.getElementById('viewer-template-badge');
+        const header = document.getElementById('viewer-session-header');
+        const photosContainer = document.getElementById('viewer-photos-container');
+
+        badge.className = `px-3.5 py-1 rounded-full text-xs font-semibold border ${tpl.badgeClass}`;
+        badge.textContent = `قالب السيشن: ${tpl.labelAr} (${tpl.labelEn})`;
+
+        header.innerHTML = `
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <p class="font-editorial-en italic text-champagne text-xl">${escapeHtml(session.subtitle)}</p>
+              <h2 class="text-3xl sm:text-5xl font-bold text-ivory mt-1">${escapeHtml(session.title)}</h2>
+            </div>
+            <div class="text-xs sm:text-sm text-muted space-y-1 md:text-left">
+              <div>${escapeHtml(session.dateLocation)}</div>
+              <div class="text-champagne font-sansEn">Color Grading: ${escapeHtml(session.colorGrading)}</div>
+            </div>
+          </div>
+          <p class="text-muted text-sm sm:text-base max-w-3xl leading-relaxed pt-2">${escapeHtml(session.story)}</p>
+        `;
+
+        const photos = Array.isArray(session.photos) ? session.photos : [];
+
+        // Distinct visual layouts per session template
+        let layoutClass = 'grid-cols-1 md:grid-cols-2 gap-6';
+        let frameExtra = 'rounded-2xl border border-champagne/25 bg-surface p-2.5';
+
+        if (session.templateId === 'editorial-luxury') {
+          layoutClass = 'grid-cols-1 md:grid-cols-2 gap-8';
+          frameExtra = 'rounded-2xl border border-champagne/35 bg-surface p-3 shadow-luxury';
+        } else if (session.templateId === 'golden-hour') {
+          layoutClass = 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5';
+          frameExtra = 'rounded-3xl border border-amber-400/30 bg-amber-950/15 p-2.5';
+        } else if (session.templateId === 'noir-fineart') {
+          layoutClass = 'grid-cols-1 gap-8 max-w-4xl mx-auto';
+          frameExtra = 'rounded-xl border border-zinc-500/30 bg-black p-3 shadow-luxury';
+        } else if (session.templateId === 'garden-daylight') {
+          layoutClass = 'grid-cols-1 md:grid-cols-2 gap-6';
+          frameExtra = 'rounded-3xl border border-emerald-400/25 bg-emerald-950/15 p-2.5';
+        }
+
+        photosContainer.className = `grid ${layoutClass} pb-16`;
+        photosContainer.innerHTML = photos
+          .map((p, index) => {
+            const isHeroWide = session.templateId === 'editorial-luxury' && index === 0 && photos.length > 2;
+            const spanClass = isHeroWide ? 'md:col-span-2' : '';
+            const aspectClass = session.templateId === 'noir-fineart' ? 'aspect-[16/10]' : 'aspect-[4/3]';
+
+            return `
+              <figure class="${spanClass} ${frameExtra} transition hover:border-champagne/60">
+                <div
+                  data-lightbox-index="${index}"
+                  class="lightbox-trigger photo-shield ${aspectClass} w-full rounded-xl overflow-hidden bg-charcoal cursor-zoom-in"
+                >
+                  <img
+                    src="${escapeAttr(p.url)}"
+                    alt="${escapeAttr(p.caption || session.title)}"
+                    draggable="false"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1200x800/18181D/D8B98A?text=Reda+Ahmed+Photo';"
+                    class="w-full h-full object-cover transition duration-500 hover:scale-[1.02]"
+                  />
+                  <div class="pointer-events-none absolute bottom-3 left-3 z-10 px-2.5 py-0.5 rounded-full bg-obsidian/70 border border-champagne/20 text-[11px] font-editorial-en italic text-champagne">
+                    Reda Ahmed
+                  </div>
+                </div>
+                <figcaption class="px-2 pt-3 pb-1 text-xs sm:text-sm text-muted flex items-center justify-between gap-2">
+                  <span>${escapeHtml(p.caption || 'لقطة من السيشن')}</span>
+                  <span class="font-editorial-en italic text-champagne/80">#${index + 1}</span>
+                </figcaption>
+              </figure>
+            `;
+          })
+          .join('');
+
+        photosContainer.querySelectorAll('.lightbox-trigger').forEach((el) => {
+          el.addEventListener('click', () => {
+            const idx = Number(el.getAttribute('data-lightbox-index'));
+            openLightbox(photos[idx]);
+          });
+        });
+
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSessionViewer() {
+        const modal = document.getElementById('session-viewer-modal');
+        modal.classList.add('hidden');
+        currentViewedSessionId = null;
+        if (document.getElementById('lightbox-modal').classList.contains('hidden')) {
+          document.body.style.overflow = '';
+        }
+      }
+
+      function openLightbox(photoObj) {
+        if (!photoObj) return;
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-img');
+        const cap = document.getElementById('lightbox-caption');
+
+        img.src = photoObj.url;
+        img.onerror = function () {
+          this.onerror = null;
+          this.src = 'https://placehold.co/1200x800/18181D/D8B98A?text=Reda+Ahmed';
+        };
+        cap.textContent = photoObj.caption || 'عرض محمي للمشاهدة فقط — Reda Ahmed';
+
+        modal.classList.remove('hidden');
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox-modal').classList.add('hidden');
+      }
+
+      // Photographer Mode Auth & UI Sync
+      function updatePhotographerModeUI() {
+        const controlBar = document.getElementById('photographer-control-bar');
+        const authLabel = document.getElementById('auth-btn-label');
+
+        if (isPhotographerMode) {
+          controlBar.classList.remove('hidden');
+          authLabel.textContent = 'وضع المصور مفعل';
+        } else {
+          controlBar.classList.add('hidden');
+          authLabel.textContent = 'وضع المصور';
+        }
+
+        renderSessionsGrid();
+      }
+
+      function openSessionFormModal(sessionId = null) {
+        if (!isPhotographerMode) return;
+
+        const modal = document.getElementById('session-form-modal');
+        const titleEl = document.getElementById('session-form-title');
+        const editIdInput = document.getElementById('edit-session-id');
+        const titleInput = document.getElementById('session-title-input');
+        const subtitleInput = document.getElementById('session-subtitle-input');
+        const templateSelect = document.getElementById('session-template-select');
+        const gradingInput = document.getElementById('session-grading-input');
+        const dateInput = document.getElementById('session-date-input');
+        const storyInput = document.getElementById('session-story-input');
+        const urlsInput = document.getElementById('session-urls-input');
+        const fileUpload = document.getElementById('session-file-upload');
+
+        pendingUploadedPhotos = [];
+        fileUpload.value = '';
+
+        if (sessionId) {
+          const existing = sessions.find((s) => s.id === sessionId);
+          if (!existing) return;
+
+          titleEl.textContent = `تعديل السيشن: ${existing.title}`;
+          editIdInput.value = existing.id;
+          titleInput.value = existing.title;
+          subtitleInput.value = existing.subtitle;
+          templateSelect.value = existing.templateId || 'editorial-luxury';
+          gradingInput.value = existing.colorGrading;
+          dateInput.value = existing.dateLocation;
+          storyInput.value = existing.story;
+          urlsInput.value = (existing.photos || []).map((p) => p.url).join('\n');
+        } else {
+          titleEl.textContent = 'إضافة سيشن جديد بقالب مخصص';
+          editIdInput.value = '';
+          titleInput.value = '';
+          subtitleInput.value = '';
+          templateSelect.value = 'editorial-luxury';
+          gradingInput.value = 'Signature Editorial & Warm Tone';
+          dateInput.value = 'نوفمبر 2026';
+          storyInput.value = '';
+          urlsInput.value = '';
+        }
+
+        renderPendingUploadsPreview();
+        modal.classList.remove('hidden');
+      }
+
+      function renderPendingUploadsPreview() {
+        const previewBox = document.getElementById('uploaded-photos-preview');
+        if (!previewBox) return;
+        if (pendingUploadedPhotos.length === 0) {
+          previewBox.innerHTML = '';
+          return;
+        }
+        previewBox.innerHTML = pendingUploadedPhotos
+          .map(
+            (p, idx) => `
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-champagne/15 border border-champagne/35 text-xs text-champagne">
+              <span>صورة مرفوعة #${idx + 1}</span>
+            </span>
+          `
+          )
+          .join('');
+      }
+
+      // Escaping helpers
+      function escapeHtml(str) {
+        return String(str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function escapeAttr(str) {
+        return escapeHtml(str).replace(/'/g, '&#39;');
+      }
+
+      // Event Listeners Initialization
+      function bindEvents() {
+        // Photographer Auth Button
+        document.getElementById('photographer-auth-btn').addEventListener('click', () => {
+          if (isPhotographerMode) {
+            showToast('وضع المصور مفعل بالفعل — يمكنك التحكم الكامل من الشريط العلوي', 'success');
+          } else {
+            document.getElementById('pin-input').value = '';
+            document.getElementById('pin-login-modal').classList.remove('hidden');
+            setTimeout(() => document.getElementById('pin-input').focus(), 80);
+          }
+        });
+
+        document.getElementById('close-pin-modal-btn').addEventListener('click', () => {
+          document.getElementById('pin-login-modal').classList.add('hidden');
+        });
+
+        document.getElementById('pin-login-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const entered = document.getElementById('pin-input').value.trim();
+          if (entered === getPin()) {
+            isPhotographerMode = true;
+            document.getElementById('pin-login-modal').classList.add('hidden');
+            updatePhotographerModeUI();
+            showToast('مرحباً رضا أحمد — تم تفعيل وضع التحكم الكامل', 'success');
+          } else {
+            showToast('الرمز السري غير صحيح — الرمز الافتراضي 2026', 'warning');
+          }
+        });
+
+        document.getElementById('lock-photographer-btn').addEventListener('click', () => {
+          isPhotographerMode = false;
+          updatePhotographerModeUI();
+          showToast('تم إغلاق وضع المصور — الموقع الآن في وضع المشاهدة فقط للزوار');
+        });
+
+        // Add Session Button
+        document.getElementById('open-add-session-btn').addEventListener('click', () => {
+          openSessionFormModal(null);
+        });
+
+        document.getElementById('close-session-form-btn').addEventListener('click', () => {
+          document.getElementById('session-form-modal').classList.add('hidden');
+        });
+
+        document.getElementById('cancel-session-form-btn').addEventListener('click', () => {
+          document.getElementById('session-form-modal').classList.add('hidden');
+        });
+
+        // Handle FileReader Uploads
+        document.getElementById('session-file-upload').addEventListener('change', (e) => {
+          const files = Array.from(e.target.files || []);
+          if (files.length === 0) return;
+
+          files.forEach((file) => {
+            if (!file.type.startsWith('image/')) return;
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+              if (ev.target && typeof ev.target.result === 'string') {
+                pendingUploadedPhotos.push({
+                  url: ev.target.result,
+                  caption: file.name.replace(/\.[^/.]+$/, ''),
+                });
+                renderPendingUploadsPreview();
+              }
+            };
+            reader.readAsDataURL(file);
+          });
+        });
+
+        // Submit Add / Edit Session Form
+        document.getElementById('session-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!isPhotographerMode) return;
+
+          const editId = document.getElementById('edit-session-id').value.trim();
+          const title = document.getElementById('session-title-input').value.trim();
+          const subtitle = document.getElementById('session-subtitle-input').value.trim();
+          const templateId = document.getElementById('session-template-select').value;
+          const colorGrading = document.getElementById('session-grading-input').value.trim();
+          const dateLocation = document.getElementById('session-date-input').value.trim();
+          const story = document.getElementById('session-story-input').value.trim();
+          const rawUrls = document
+            .getElementById('session-urls-input')
+            .value.split('\n')
+            .map((line) => line.trim())
+            .filter(Boolean);
+
+          const urlPhotos = rawUrls.map((url, idx) => ({
+            url,
+            caption: `${title} — لقطة #${idx + 1}`,
+          }));
+
+          const combinedPhotos = [...urlPhotos, ...pendingUploadedPhotos];
+
+          if (combinedPhotos.length === 0) {
+            combinedPhotos.push({
+              url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85',
+              caption: `${title} — لقطة رئيسية`,
+            });
+          }
+
+          if (editId) {
+            const idx = sessions.findIndex((s) => s.id === editId);
+            if (idx !== -1) {
+              sessions[idx] = {
+                ...sessions[idx],
+                title,
+                subtitle,
+                templateId,
+                colorGrading,
+                dateLocation,
+                story,
+                photos: combinedPhotos,
+              };
+              showToast(`تم تحديث سيشن "${title}" بنجاح`, 'success');
+            }
+          } else {
+            const newSession = {
+              id: 'sess-' + Date.now(),
+              title,
+              subtitle,
+              templateId,
+              colorGrading,
+              dateLocation,
+              story,
+              photos: combinedPhotos,
+            };
+            sessions.unshift(newSession);
+            showToast(`تم إضافة سيشن "${title}" بقالب ${TEMPLATE_META[templateId].labelAr}`, 'success');
+          }
+
+          saveSessions();
+          renderSessionsGrid();
+          document.getElementById('session-form-modal').classList.add('hidden');
+        });
+
+        // Change PIN Modal
+        document.getElementById('open-pin-settings-btn').addEventListener('click', () => {
+          document.getElementById('new-pin-input').value = '';
+          document.getElementById('change-pin-modal').classList.remove('hidden');
+        });
+
+        document.getElementById('cancel-pin-change-btn').addEventListener('click', () => {
+          document.getElementById('change-pin-modal').classList.add('hidden');
+        });
+
+        document.getElementById('change-pin-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const newPin = document.getElementById('new-pin-input').value.trim();
+          if (newPin.length < 4) {
+            showToast('يجب أن يتكون الرمز السري من 4 أحرف/أرقام على الأقل', 'warning');
+            return;
+          }
+          setPin(newPin);
+          document.getElementById('change-pin-modal').classList.add('hidden');
+          showToast('تم تحديث الرمز السري لوضع المصور بنجاح', 'success');
+        });
+
+        // Session Viewer & Lightbox Close Controls
+        document.getElementById('close-session-viewer-btn').addEventListener('click', closeSessionViewer);
+        document.getElementById('close-lightbox-btn').addEventListener('click', closeLightbox);
+
+        document.getElementById('lightbox-modal').addEventListener('click', (e) => {
+          if (e.target.id === 'lightbox-modal') closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+              closeLightbox();
+            } else if (!document.getElementById('session-viewer-modal').classList.contains('hidden')) {
+              closeSessionViewer();
+            }
+          }
+        });
+
+        // Copy Phone Button (using execCommand fallback safely)
+        document.getElementById('copy-phone-btn').addEventListener('click', () => {
+          try {
+            const tempInput = document.createElement('input');
+            tempInput.value = PHONE_NUMBER;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(`تم نسخ الرقم ${PHONE_NUMBER} بنجاح`, 'success');
+          } catch {
+            showToast(`الرقم: ${PHONE_NUMBER}`, 'info');
+          }
+        });
+      }
+
+      // Initialize App
+      document.addEventListener('DOMContentLoaded', () => {
+        setupVisitorProtection();
+        bindEvents();
+        renderFilterBar();
+        renderSessionsGrid();
+      });
+    })();
+  </script>
+</body>
+</html>
